@@ -34,17 +34,17 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
           
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance">
-            Apni faslon ko bachayein! Upload karein plant ki tasveer aur hamara AI instantly bata dega ke plant ko kaunsi bimari hai aur iska ilaaj kya hai.
+            Protect your crops! Upload a plant image and our AI will instantly identify any disease and provide treatment recommendations.
           </p>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="hero" size="xl" onClick={onGetStarted}>
               <Leaf className="w-5 h-5" />
-              Shuru Karein
+              Get Started
             </Button>
             <Button variant="outline" size="lg">
-              Mazeed Janein
+              Learn More
             </Button>
           </div>
           

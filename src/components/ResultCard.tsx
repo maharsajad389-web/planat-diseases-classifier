@@ -22,7 +22,7 @@ const ResultCard = ({ result }: ResultCardProps) => {
         color: "text-primary",
         bgColor: "bg-primary/10",
         borderColor: "border-primary/30",
-        label: "Sehat Mand",
+        label: "Healthy",
       };
     }
     if (result.confidence > 0.7) {
@@ -31,7 +31,7 @@ const ResultCard = ({ result }: ResultCardProps) => {
         color: "text-destructive",
         bgColor: "bg-destructive/10",
         borderColor: "border-destructive/30",
-        label: "Bimari Ka Pata Chala",
+        label: "Disease Detected",
       };
     }
     return {
@@ -39,7 +39,7 @@ const ResultCard = ({ result }: ResultCardProps) => {
       color: "text-accent",
       bgColor: "bg-accent/10",
       borderColor: "border-accent/30",
-      label: "Mumkin Bimari",
+      label: "Possible Disease",
     };
   };
 
@@ -78,7 +78,7 @@ const ResultCard = ({ result }: ResultCardProps) => {
             <Leaf className="w-5 h-5 text-primary" />
           </div>
           <div>
-            <h4 className="font-semibold text-foreground mb-1">Tafseelat</h4>
+            <h4 className="font-semibold text-foreground mb-1">Description</h4>
             <p className="text-sm text-muted-foreground leading-relaxed">{result.description}</p>
           </div>
         </div>
@@ -90,7 +90,7 @@ const ResultCard = ({ result }: ResultCardProps) => {
               <Pill className="w-5 h-5 text-secondary-foreground" />
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-1">Ilaaj</h4>
+              <h4 className="font-semibold text-foreground mb-1">Treatment</h4>
               <p className="text-sm text-muted-foreground leading-relaxed">{result.treatment}</p>
             </div>
           </div>
@@ -102,7 +102,7 @@ const ResultCard = ({ result }: ResultCardProps) => {
             <Shield className="w-5 h-5 text-accent" />
           </div>
           <div>
-            <h4 className="font-semibold text-foreground mb-1">Bachao</h4>
+            <h4 className="font-semibold text-foreground mb-1">Prevention</h4>
             <p className="text-sm text-muted-foreground leading-relaxed">{result.prevention}</p>
           </div>
         </div>
