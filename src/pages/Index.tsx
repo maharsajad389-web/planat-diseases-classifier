@@ -17,25 +17,25 @@ const mockClassify = (): Promise<ClassificationResult> => {
           disease: "Tomato Late Blight",
           confidence: 0.92,
           isHealthy: false,
-          description: "Late blight ek fungal infection hai jo Phytophthora infestans ki wajah se hota hai. Ye bimari patton par brown-black spots banati hai jo tezi se phailte hain.",
-          treatment: "Copper-based fungicide ya Mancozeb spray karein. Mutasir patton ko hata dein aur jalaa dein. Fasal ko alag karein taake sehat mand plants tak na phail sake.",
-          prevention: "Resistant varieties lagayein. Drip irrigation istemal karein. Plants ke darmiyan munasib fasla rakhein hawa ke behtar guzar ke liye.",
+          description: "Late blight is a fungal infection caused by Phytophthora infestans. This disease creates brown-black spots on leaves that spread rapidly.",
+          treatment: "Apply copper-based fungicide or Mancozeb spray. Remove and burn affected leaves. Isolate the crop to prevent spread to healthy plants.",
+          prevention: "Plant resistant varieties. Use drip irrigation. Maintain proper spacing between plants for better air circulation.",
         },
         {
           disease: "Healthy Plant",
           confidence: 0.95,
           isHealthy: true,
-          description: "Aapka plant bilkul sehat mand hai! Koi bimari ya stress ke nishaan nahi hain. Patte hare aur chamakdar hain.",
+          description: "Your plant is perfectly healthy! No signs of disease or stress detected. The leaves are green and vibrant.",
           treatment: "",
-          prevention: "Apni achi practices jari rakhein. Baqa'ida pani dein, munasib dhoop aur ghiza frahum karein apne plants ko sehat mand rakhne ke liye.",
+          prevention: "Continue your good practices. Regular watering, proper sunlight, and nutrition will keep your plants healthy.",
         },
         {
           disease: "Powdery Mildew",
           confidence: 0.85,
           isHealthy: false,
-          description: "Powdery mildew patton par safed powder jaisi paras banata hai. Ye fungal infection hawa ke zariye phailti hai aur garmi mein zyada hoti hai.",
-          treatment: "Neem oil ya sulfur-based fungicide spray karein. Baking soda solution (1 tbsp per liter pani) bhi kaam karta hai.",
-          prevention: "Plants ko bharpur dhoop mein rakhein. Zyada pani dene se bachein. Hawa ke achay guzar ke liye patton ki katai karein.",
+          description: "Powdery mildew creates a white powder-like coating on leaves. This fungal infection spreads through air and is more common in warm weather.",
+          treatment: "Apply neem oil or sulfur-based fungicide. Baking soda solution (1 tbsp per liter of water) also works effectively.",
+          prevention: "Keep plants in full sunlight. Avoid overwatering. Prune leaves for better air circulation.",
         },
       ];
       resolve(diseases[Math.floor(Math.random() * diseases.length)]);
@@ -86,10 +86,10 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 animate-slide-up">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
-                Plant Ka Photo Dalein
+                Upload Plant Image
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Apne plant ke patte ki saaf tasveer upload karein. Hamara AI kuch hi seconds mein bimari ki pehchaan kar dega.
+                Upload a clear image of your plant's leaf. Our AI will identify any disease within seconds.
               </p>
             </div>
 
@@ -101,7 +101,7 @@ const Index = () => {
                 <div className="flex justify-center mt-6">
                   <Button variant="outline" onClick={handleReset} className="gap-2">
                     <RefreshCw className="w-4 h-4" />
-                    Nayi Tasveer
+                    New Image
                   </Button>
                 </div>
               </div>
@@ -119,13 +119,13 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center animate-slide-up">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-serif">
-                Is Project Ke Baare Mein
+                About This Project
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Ye Final Year Project hai jo kisanon aur baghbani ke shauqeen logon ki madad ke liye banaya gaya hai. 
-                Hamara maqsad AI technology ko aam logon tak pohanchana hai taake wo apni faslon ki bimarion ko jaldi 
-                pehchaan sakein aur munasib ilaaj kar sakein. Is system mein deep learning models istemal kiye gaye hain 
-                jo 38 se zyada plant bimarion ko pehchaan sakte hain.
+                This is a Final Year Project designed to help farmers and gardening enthusiasts. 
+                Our goal is to make AI technology accessible to everyone so they can quickly identify 
+                crop diseases and apply appropriate treatments. This system uses deep learning models 
+                capable of identifying more than 38 different plant diseases.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 {["Deep Learning", "Computer Vision", "TensorFlow", "React", "TypeScript"].map((tech) => (

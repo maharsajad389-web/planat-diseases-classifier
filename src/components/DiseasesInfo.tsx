@@ -3,30 +3,30 @@ import { Bug, Droplets, Sun, Wind } from "lucide-react";
 const diseases = [
   {
     name: "Late Blight",
-    urdu: "آلو کا مرجھانا",
+    subtitle: "Fungal Infection",
     icon: Droplets,
-    description: "Aloo aur tamatar mein hone wali sabse khatarnak bimari",
+    description: "Most dangerous disease affecting potatoes and tomatoes",
     color: "bg-blue-500/10 text-blue-600",
   },
   {
     name: "Powdery Mildew",
-    urdu: "سفید پھپھوندی",
+    subtitle: "Surface Fungus",
     icon: Wind,
-    description: "Patton par safed powder jaisi fungal infection",
+    description: "White powder-like fungal infection on leaves",
     color: "bg-gray-500/10 text-gray-600",
   },
   {
     name: "Bacterial Spot",
-    urdu: "دھبے والی بیماری",
+    subtitle: "Bacterial Disease",
     icon: Bug,
-    description: "Patton aur phalon par kaale dhabbe",
+    description: "Dark spots appearing on leaves and fruits",
     color: "bg-amber-500/10 text-amber-600",
   },
   {
     name: "Leaf Scorch",
-    urdu: "پتوں کا جلنا",
+    subtitle: "Environmental Stress",
     icon: Sun,
-    description: "Garmi aur pani ki kami se patton ka jalna",
+    description: "Leaf burning caused by heat and water deficiency",
     color: "bg-orange-500/10 text-orange-600",
   },
 ];
@@ -37,10 +37,10 @@ const DiseasesInfo = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
-            Aam Plant Bimariyan
+            Common Plant Diseases
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Hamara AI in sab bimariyon ko pehchaan sakta hai aur aapko sahi ilaaj batata hai
+            Our AI can detect all these diseases and provide you with accurate treatment recommendations
           </p>
         </div>
 
@@ -55,7 +55,7 @@ const DiseasesInfo = () => {
                 <disease.icon className="w-6 h-6" />
               </div>
               <h3 className="font-semibold text-foreground mb-1">{disease.name}</h3>
-              <p className="text-sm text-primary font-medium mb-2">{disease.urdu}</p>
+              <p className="text-sm text-primary font-medium mb-2">{disease.subtitle}</p>
               <p className="text-sm text-muted-foreground">{disease.description}</p>
             </div>
           ))}

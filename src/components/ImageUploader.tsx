@@ -91,10 +91,10 @@ const ImageUploader = ({ onImageSelect, isLoading }: ImageUploaderProps) => {
             </div>
             <div className="text-center">
               <p className="text-lg font-medium text-foreground mb-1">
-                Plant ki tasveer upload karein
+                Upload plant image
               </p>
               <p className="text-sm text-muted-foreground">
-                Drag & drop ya click karein
+                Drag & drop or click to browse
               </p>
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
